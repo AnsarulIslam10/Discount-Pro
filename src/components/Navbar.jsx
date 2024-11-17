@@ -41,8 +41,9 @@ const Navbar = () => {
           {links}
         </ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn bg-[#28b5f6] text-white">Login</a>
+      <div className="navbar-end gap-2">
+        <a className="btn bg-[#28b5f6] rounded-md text-white">Login</a>
+        <a className="btn bg-[#28b5f6] rounded-md text-white">Register</a>
       </div>
     </div>
   );
