@@ -1,0 +1,273 @@
+[
+    {
+      "_id": "1",
+      "brand_name": "Daraz Bangladesh",
+      "rating": 4.7,
+      "description": "The leading online shopping platform in Bangladesh.",
+      "brand_logo": "https://example.com/logos/daraz.png",
+      "coupons": [
+        {
+          "coupon_code": "DARAZ10",
+          "description": "Get 10% off on your first order.",
+          "expiry_date": "2024-12-31",
+          "condition": "New users only.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "FREESHIP",
+          "description": "Free delivery on orders above ৳1000.",
+          "expiry_date": "2024-11-30",
+          "condition": "No minimum order required.",
+          "coupon_type": "Free Shipping"
+        }
+      ],
+      "shop_link": "https://www.daraz.com.bd",
+      "category": "E-commerce",
+      "isSaleOn": true
+    },
+    {
+      "_id": "2",
+      "brand_name": "AjkerDeal",
+      "rating": 4.3,
+      "description": "Bangladesh's best online marketplace for deals and discounts.",
+      "brand_logo": "https://example.com/logos/ajkerdeal.png",
+      "coupons": [
+        {
+          "coupon_code": "AJKER5",
+          "description": "Get ৳5 off on all products.",
+          "expiry_date": "2024-11-30",
+          "condition": "No minimum purchase required.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "BOGO",
+          "description": "Buy one, get one free on selected items.",
+          "expiry_date": "2024-11-25",
+          "condition": "Valid on select categories.",
+          "coupon_type": "Buy One Get One"
+        }
+      ],
+      "shop_link": "https://www.ajkerdeal.com",
+      "category": "E-commerce",
+      "isSaleOn": false
+    },
+    {
+      "_id": "3",
+      "brand_name": "Chaldal",
+      "rating": 4.6,
+      "description": "Bangladesh's largest online grocery store.",
+      "brand_logo": "https://example.com/logos/chaldal.png",
+      "coupons": [
+        {
+          "coupon_code": "CHAL10",
+          "description": "Get 10% off on your first grocery order.",
+          "expiry_date": "2024-12-15",
+          "condition": "First-time users only.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "FREESHIP",
+          "description": "Free shipping on orders over ৳1500.",
+          "expiry_date": "2024-11-20",
+          "condition": "Valid for grocery orders.",
+          "coupon_type": "Free Shipping"
+        }
+      ],
+      "shop_link": "https://www.chaldal.com",
+      "category": "Grocery",
+      "isSaleOn": true
+    },
+    {
+      "_id": "4",
+      "brand_name": "Pickaboo",
+      "rating": 4.5,
+      "description": "The online store for gadgets, electronics, and accessories.",
+      "brand_logo": "https://example.com/logos/pickaboo.png",
+      "coupons": [
+        {
+          "coupon_code": "PICK10",
+          "description": "Save 10% on all electronics.",
+          "expiry_date": "2024-12-05",
+          "condition": "Valid on selected items.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "PICKFREESHIP",
+          "description": "Free delivery on all orders.",
+          "expiry_date": "2024-11-30",
+          "condition": "No minimum purchase required.",
+          "coupon_type": "Free Shipping"
+        }
+      ],
+      "shop_link": "https://www.pickaboo.com",
+      "category": "Electronics",
+      "isSaleOn": true
+    },
+    {
+      "_id": "5",
+      "brand_name": "Noman Group",
+      "rating": 4.4,
+      "description": "Leading brand in lifestyle products and household items.",
+      "brand_logo": "https://example.com/logos/noman.png",
+      "coupons": [
+        {
+          "coupon_code": "NOMAN15",
+          "description": "Get 15% off on all home appliances.",
+          "expiry_date": "2024-12-10",
+          "condition": "Valid for online orders only.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "FREESHIP",
+          "description": "Free shipping on orders above ৳2000.",
+          "expiry_date": "2024-11-25",
+          "condition": "No minimum purchase required.",
+          "coupon_type": "Free Shipping"
+        }
+      ],
+      "shop_link": "https://www.nomangroup.com",
+      "category": "Home Appliances",
+      "isSaleOn": false
+    },
+    {
+      "_id": "6",
+      "brand_name": "Shoppers Stop Bangladesh",
+      "rating": 4.2,
+      "description": "The go-to store for fashion and lifestyle products.",
+      "brand_logo": "https://example.com/logos/shoppersstop.png",
+      "coupons": [
+        {
+          "coupon_code": "SS10",
+          "description": "10% off on new arrivals.",
+          "expiry_date": "2024-12-31",
+          "condition": "Valid on full-priced items.",
+          "coupon_type": "Discount"
+        }
+      ],
+      "shop_link": "https://www.shoppersstop.com.bd",
+      "category": "Fashion",
+      "isSaleOn": false
+    },
+    {
+      "_id": "7",
+      "brand_name": "MegaMart",
+      "rating": 4.3,
+      "description": "Superstore for groceries, fashion, and more.",
+      "brand_logo": "https://example.com/logos/megamart.png",
+      "coupons": [
+        {
+          "coupon_code": "MEGA25",
+          "description": "25% off on your first grocery order.",
+          "expiry_date": "2024-11-30",
+          "condition": "First-time users only.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "MEGAFREESHIP",
+          "description": "Free delivery on orders above ৳1000.",
+          "expiry_date": "2024-12-10",
+          "condition": "No minimum purchase required.",
+          "coupon_type": "Free Shipping"
+        }
+      ],
+      "shop_link": "https://www.megamart.com.bd",
+      "category": "Supermarket",
+      "isSaleOn": true
+    },
+    {
+      "_id": "8",
+      "brand_name": "Bikroy",
+      "rating": 4.8,
+      "description": "Bangladesh's most popular online marketplace for classifieds.",
+      "brand_logo": "https://example.com/logos/bikroy.png",
+      "coupons": [
+        {
+          "coupon_code": "BIKROY20",
+          "description": "Get 20% off on selected used items.",
+          "expiry_date": "2024-12-15",
+          "condition": "Valid for used items only.",
+          "coupon_type": "Discount"
+        }
+      ],
+      "shop_link": "https://www.bikroy.com",
+      "category": "Marketplace",
+      "isSaleOn": false
+    },
+    {
+      "_id": "9",
+      "brand_name": "Monsoon",
+      "rating": 4.1,
+      "description": "Leading Bangladeshi brand for stylish clothing and accessories.",
+      "brand_logo": "https://example.com/logos/monsoon.png",
+      "coupons": [
+        {
+          "coupon_code": "MONSOON15",
+          "description": "Save 15% on your next fashion purchase.",
+          "expiry_date": "2024-12-20",
+          "condition": "Valid for online purchases only.",
+          "coupon_type": "Discount"
+        }
+      ],
+      "shop_link": "https://www.monsoon.com.bd",
+      "category": "Fashion",
+      "isSaleOn": true
+    },
+    {
+      "_id": "10",
+      "brand_name": "The Westin Dhaka",
+      "rating": 4.6,
+      "description": "Luxury hotel offering excellent hospitality and service.",
+      "brand_logo": "https://example.com/logos/westin.png",
+      "coupons": [
+        {
+          "coupon_code": "WESTIN20",
+          "description": "20% off on room booking.",
+          "expiry_date": "2024-11-25",
+          "condition": "Valid on weekday bookings.",
+          "coupon_type": "Discount"
+        }
+      ],
+      "shop_link": "https://www.westindhaka.com",
+      "category": "Hotel",
+      "isSaleOn": false
+    },
+    {
+      "_id": "11",
+      "brand_name": "Jadukor",
+      "rating": 4.4,
+      "description": "Famous Bangladeshi jewelry brand offering a wide range of designs.",
+      "brand_logo": "https://example.com/logos/jadukor.png",
+      "coupons": [
+        {
+          "coupon_code": "JADU10",
+          "description": "10% off on all jewelry items.",
+          "expiry_date": "2024-12-31",
+          "condition": "Valid on all purchases.",
+          "coupon_type": "Discount"
+        }
+      ],
+      "shop_link": "https://www.jadukor.com",
+      "category": "Jewelry",
+      "isSaleOn": false
+    },
+    {
+      "_id": "12",
+      "brand_name": "Pathao",
+      "rating": 4.7,
+      "description": "Bangladesh's leading ride-sharing and courier service.",
+      "brand_logo": "https://example.com/logos/pathao.png",
+      "coupons": [
+        {
+          "coupon_code": "PATHAO30",
+          "description": "30% off on your next ride.",
+          "expiry_date": "2024-12-05",
+          "condition": "Valid for new users only.",
+          "coupon_type": "Discount"
+        }
+      ],
+      "shop_link": "https://www.pathao.com",
+      "category": "Ride-Sharing",
+      "isSaleOn": false
+    }
+  ]
+  
