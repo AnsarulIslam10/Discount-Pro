@@ -1,6 +1,7 @@
 import React from "react";
 import { MdOutlineDiscount } from "react-icons/md";
 import ReactStars from "react-rating-stars-component";
+import { NavLink } from "react-router-dom";
 const BrandCard = ({ brand }) => {
   return (
     <div className="border mb-3 p-8 flex justify-between items-center shadow-md">
@@ -24,7 +25,7 @@ const BrandCard = ({ brand }) => {
         {
             brand.isSaleOn && <p className="animate__animated animate__bounce animate__infinite text-lg text-red-500 font-semibold flex items-center gap-1">On Sale <MdOutlineDiscount /> </p>
         }
-        <button className="btn bg-[#28b5f6] text-white rounded-md">View Coupons</button>
+        <NavLink to={`/brand/${brand._id}`}><button className="btn bg-[#28b5f6] text-white rounded-md">View Coupons</button></NavLink>
       </div>
     </div>
   );
