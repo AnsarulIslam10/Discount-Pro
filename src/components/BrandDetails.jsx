@@ -2,10 +2,14 @@ import React from "react";
 import { useLoaderData } from "react-router-dom";
 import ReactStars from "react-rating-stars-component";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import { toast } from "react-toastify";
 const BrandDetails = () => {
   const { brand_name, brand_logo, rating, coupons, shop_link } =
     useLoaderData();
   console.log(brand_name);
+  const handleCopy =()=>{
+    toast.success('Coupon code copied to clipboard')
+  }
   return (
     <div className="mt-8 mb-8">
       <div className="flex flex-col items-center justify-center gap-4 shadow-md border p-4">
@@ -55,10 +59,9 @@ const BrandDetails = () => {
             <div className="flex flex-col gap-2">
               <CopyToClipboard
                 text={coupon.coupon_code}
-                onCopy={() => this.setState({ copied: true })}
+                onCopy={handleCopy}
               >
               <button className="btn">Copy Code</button>
-              {/* alert here */}
               </CopyToClipboard>
               <a href={shop_link} target="_blank" className="btn">
                 Use Now

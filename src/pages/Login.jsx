@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const { signInUser, signInWithGoogle } = useContext(AuthContext);
@@ -16,10 +17,12 @@ const Login = () => {
     signInUser(email, password)
       .then((result) => {
         console.log(result.user);
+        toast.success("Login successful")
         navigate(location?.state ? location.state : "/");
       })
-      .catch((error) => {
-        console.log(error);
+      .catch((err) => {
+        console.log(err);
+        toast.error(err.message)
       });
   };
 
@@ -27,10 +30,12 @@ const Login = () => {
     signInWithGoogle()
       .then((result) => {
         console.log(result.user);
+        toast.success("Login successful")
         navigate(location?.state ? location.state : "/");
       })
-      .catch((error) => {
-        console.log(error);
+      .catch((err) => {
+        console.log(err);
+        toast.error(err.message)
       });
   };
 
