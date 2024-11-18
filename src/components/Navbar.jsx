@@ -13,7 +13,7 @@ const Navbar = () => {
       </li>
       {user && (
         <li>
-          <NavLink to={"/myprofile"}>My Profile</NavLink>
+          <NavLink to={"/my-profile"}>My Profile</NavLink>
         </li>
       )}
       <li>
@@ -58,7 +58,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <div className="flex items-center px-2">
             <p className="text-xs">{user.email}</p>
-            <img className="w-10 rounded-full" src={user.photoURL} alt="" />
+            <img className="w-10 h-10 rounded-full" src={user?.photoURL} alt="" />
             </div>
             <button onClick={signOutUser} className="btn bg-[#28b5f6] text-white">Log-Out</button>
           </div>

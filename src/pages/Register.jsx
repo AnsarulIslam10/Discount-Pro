@@ -4,18 +4,21 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Register = () => {
-  const {createUser, signInWithGoogle} = useContext(AuthContext);
+  const {createUser, setUser, updateUserProfile, signInWithGoogle} = useContext(AuthContext);
   const navigate = useNavigate()
   const handleSubmit = (e) =>{
     e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
+    const photo = e.target.photo.value;
     const password = e.target.password.value;
     console.log(name, email, password);
 
     createUser(email, password)
       .then((result) => {
-        console.log(result.user);
+        const user = result.user;
+        setUser(user);
+        updateUserProfile({displayName: name, photoURL: photo})
         navigate("/");
       })
       .catch((error) => {
@@ -32,6 +35,7 @@ const Register = () => {
         console.log(error);
       });
   };
+
   return (
     <div className="flex justify-center items-center py-32">
       <div className="card bg-base-100 w-full max-w-lg rounded-none p-10 shrink-0 shadow-2xl">
