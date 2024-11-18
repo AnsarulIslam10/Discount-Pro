@@ -1,6 +1,10 @@
 import React from "react";
 import { FaSearch } from "react-icons/fa";
+import { useLoaderData } from "react-router-dom";
+import BrandCard from "../components/BrandCard";
 const BrandsPage = () => {
+  const brands = useLoaderData()
+  console.log(brands)
   return (
     <div className="mt-8">
       <div className="flex items-center justify-between">
@@ -11,8 +15,10 @@ const BrandsPage = () => {
         </div>
       </div>
 
-      <div>
-        
+      <div className="mt-8">
+        {
+          brands.map(brand => <BrandCard key={brand._id} brand={brand}></BrandCard>)
+        }
       </div>
     </div>
   );

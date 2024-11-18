@@ -15,7 +15,8 @@ const router = createBrowserRouter([
         },
         {
             path: '/brands',
-            element: <BrandsPage></BrandsPage>
+            element: <BrandsPage></BrandsPage>,
+            loader: ()=> fetch(`/coupons.json`)
         }
       ]
     },
