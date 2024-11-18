@@ -4,11 +4,11 @@ import ReactStars from "react-rating-stars-component";
 import { NavLink } from "react-router-dom";
 const BrandCard = ({ brand }) => {
   return (
-    <div className="border mb-3 p-8 flex justify-between items-center shadow-md">
-      <div className="flex items-center gap-4">
+    <div className="border mb-3 p-8 flex md:flex-row flex-col text-center md:text-start md:justify-between items-center shadow-md">
+      <div className="flex flex-col md:flex-row items-center gap-4">
         <img className="w-32" src={brand.brand_logo} alt="" />
         <div>
-          <div className="flex items-center">
+          <div className="flex justify-center md:justify-normal items-center">
             <ReactStars
               count={5}
               value={brand.rating}
@@ -21,9 +21,9 @@ const BrandCard = ({ brand }) => {
           <p>{brand.description}</p>
         </div>
       </div>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center mt-8 md:mt-0">
         {
-            brand.isSaleOn && <p className="animate__animated animate__bounce animate__infinite text-lg text-red-500 font-semibold flex items-center gap-1">On Sale <MdOutlineDiscount /> </p>
+            brand.isSaleOn && <p className="animate__animated animate__bounce animate__infinite text-lg text-red-500 font-semibold flex items-center">On Sale <MdOutlineDiscount /> </p>
         }
         <NavLink to={`/brand/${brand._id}`}><button className="btn bg-[#28b5f6] text-white rounded-md">View Coupons</button></NavLink>
       </div>
