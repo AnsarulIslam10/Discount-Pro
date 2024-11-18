@@ -49,7 +49,7 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
             {links}
-            <Marquee><li className="mr-2">{user.email}</li></Marquee>
+            <Marquee><li className="mr-2">{user?.email}</li></Marquee>
           </ul>
         </div>
         <a className="md:text-3xl text-lg overflow-hidden sm:text-xl font-bold text-[#28b5f6]">Discount PRO</a>
