@@ -1,13 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
+import { FaEye, FaEyeSlash } from "react-icons/fa6";
 
 const Register = () => {
   const {createUser, setUser, updateUserProfile, signInWithGoogle} = useContext(AuthContext);
   const navigate = useNavigate()
   const location = useLocation();
+  const [showPassword, setShowPassword] = useState(false)
   const handleSubmit = (e) =>{
     e.preventDefault();
     const name = e.target.name.value;
@@ -83,17 +85,22 @@ const Register = () => {
               required
             />
           </div>
-          <div className="form-control">
+          <div className="form-control relative">
             <label className="label">
               <span className="label-text font-medium text-lg">Password</span>
             </label>
             <input
-              type="password"
+              type={showPassword ? "text" : "password"}
               name="password"
               placeholder="password"
               className="input input-bordered"
               required
             />
+            <p onClick={()=> setShowPassword(!showPassword)} className="absolute right-4 text-gray-600 top-[60px]">
+              {
+                showPassword ? <FaEyeSlash/> : <FaEye />
+              }
+            </p>
             <label className="label">
               <a href="#" className="label-text-alt link link-hover">
                 Forgot password?
