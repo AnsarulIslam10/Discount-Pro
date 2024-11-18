@@ -55,7 +55,7 @@ const Navbar = () => {
         <a className="md:text-3xl text-lg overflow-hidden sm:text-xl font-bold text-[#28b5f6]">Discount PRO</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 gap-2">{links}</ul>
+        <ul className="menu menu-horizontal px-1 gap-1">{links}</ul>
       </div>
       <div className="navbar-end gap-2">
         {user && user?.email ? (
