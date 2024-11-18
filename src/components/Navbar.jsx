@@ -42,8 +42,8 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end gap-2">
-        <Link to={'/login'} className="btn bg-[#28b5f6] rounded-md text-white">Login</Link>
-        <Link to={'/register'} className="btn bg-[#28b5f6] rounded-md text-white">Register</Link>
+        <NavLink to={'/login'} className={({isActive}) => `btn btn-ghost rounded-md ${isActive? ' bg-[#28b5f6] text-white' : 'border-[#28b5f6] text-[#28b5f6] border-2'}`}>Login</NavLink>
+        <NavLink to={'/register'}  className={({isActive}) => `btn btn-ghost rounded-md ${isActive? ' bg-[#28b5f6] text-white' : 'border-[#28b5f6] text-[#28b5f6] border-2'}`}>Register</NavLink>
       </div>
     </div>
   );
