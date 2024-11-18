@@ -1,13 +1,42 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Register = () => {
+  const {createUser, signInWithGoogle} = useContext(AuthContext);
+  const navigate = useNavigate()
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(name, email, password);
+
+    createUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+  const handleGoogleSignIn = () => {
+    signInWithGoogle()
+      .then((result) => {
+        console.log(result.user);
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <div className="flex justify-center items-center py-32">
       <div className="card bg-base-100 w-full max-w-lg rounded-none p-10 shrink-0 shadow-2xl">
         <h2 className="text-4xl font-semibold text-center">Register</h2>
-        <form className="card-body">
+        <form onSubmit={handleSubmit} className="card-body">
           <div className="form-control">
             <label className="label">
               <span className="label-text font-medium text-lg">Name</span>
@@ -64,15 +93,14 @@ const Register = () => {
           <div className="form-control mt-6">
             <button className="btn bg-[#28b5f6] text-white">Register</button>
           </div>
-
-          <div className="divider text-gray-400">or register with</div>
-          <div>
-            <button className="btn bg-base-100 shadow text-[#4285F4] w-full">
+        </form>
+        <div className="divider text-gray-400">or register with</div>
+          <div className="px-8 mb-3">
+            <button onClick={handleGoogleSignIn} className="btn bg-base-100 shadow text-[#4285F4] w-full">
               <FcGoogle className="text-2xl" />
               Google
             </button>
           </div>
-        </form>
         <p className="text-center font-semibold">
           Already Have an Account?{" "}
           <Link className="text-red-500 hover:underline" to={"/login"}>

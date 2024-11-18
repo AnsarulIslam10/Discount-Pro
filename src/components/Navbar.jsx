@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
 const Navbar = () => {
-    const links = <>
-        <li><NavLink to={'/'}>Home</NavLink></li>
-        <li><NavLink to={'/brands'}>Brands</NavLink></li>
-        <li><NavLink to={'/myprofile'}>My Profile</NavLink></li>
-        <li><NavLink to={'/about'}>About Dev</NavLink></li>
+  const { user, signOutUser } = useContext(AuthContext);
+  const links = (
+    <>
+      <li>
+        <NavLink to={"/"}>Home</NavLink>
+      </li>
+      <li>
+        <NavLink to={"/brands"}>Brands</NavLink>
+      </li>
+      {user && (
+        <li>
+          <NavLink to={"/myprofile"}>My Profile</NavLink>
+        </li>
+      )}
+      <li>
+        <NavLink to={"/about"}>About Dev</NavLink>
+      </li>
     </>
+  );
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -37,13 +51,45 @@ const Navbar = () => {
         <a className="text-3xl font-bold text-[#28b5f6]">Discount PRO</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          {links}
-        </ul>
+        <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end gap-2">
-        <NavLink to={'/login'} className={({isActive}) => `btn btn-ghost rounded-md ${isActive? ' bg-[#28b5f6] text-white' : 'border-[#28b5f6] text-[#28b5f6] border-2'}`}>Login</NavLink>
-        <NavLink to={'/register'}  className={({isActive}) => `btn btn-ghost rounded-md ${isActive? ' bg-[#28b5f6] text-white' : 'border-[#28b5f6] text-[#28b5f6] border-2'}`}>Register</NavLink>
+        {user && user?.email ? (
+          <div className="flex items-center">
+            <div className="flex items-center px-2">
+            <p className="text-xs">{user.email}</p>
+            <img className="w-10 rounded-full" src={user.photoURL} alt="" />
+            </div>
+            <button onClick={signOutUser} className="btn bg-[#28b5f6] text-white">Log-Out</button>
+          </div>
+        ) : (
+          <div className="flex gap-2">
+            <NavLink
+              to={"/login"}
+              className={({ isActive }) =>
+                `btn btn-ghost rounded-md ${
+                  isActive
+                    ? " bg-[#28b5f6] text-white"
+                    : "border-[#28b5f6] text-[#28b5f6] border-2"
+                }`
+              }
+            >
+              Login
+            </NavLink>
+            <NavLink
+              to={"/register"}
+              className={({ isActive }) =>
+                `btn btn-ghost rounded-md ${
+                  isActive
+                    ? " bg-[#28b5f6] text-white"
+                    : "border-[#28b5f6] text-[#28b5f6] border-2"
+                }`
+              }
+            >
+              Register
+            </NavLink>
+          </div>
+        )}
       </div>
     </div>
   );
