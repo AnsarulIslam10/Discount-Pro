@@ -9,6 +9,7 @@ const Register = () => {
   const {createUser, setUser, updateUserProfile, signInWithGoogle} = useContext(AuthContext);
   const navigate = useNavigate()
   const location = useLocation();
+  const [error, setError] = useState('');
   const [showPassword, setShowPassword] = useState(false)
   const handleSubmit = (e) =>{
     e.preventDefault();
@@ -17,6 +18,20 @@ const Register = () => {
     const photo = e.target.photo.value;
     const password = e.target.password.value;
     console.log(name, email, password);
+
+    setError('')
+    if (password.length < 6) {
+      setError("Password must be at least 6 charecters long.")
+      return;
+    }
+    if (!/[a-z]/.test(password)) {
+      setError("Password must contain at least one lowercase letter")
+      return;
+    }
+    if (!/[A-Z]/.test(password)) {
+      setError("Password must contain at least one Uppercase letter")
+      return;
+    }
 
     createUser(email, password)
       .then((result) => {
@@ -101,6 +116,11 @@ const Register = () => {
                 showPassword ? <FaEyeSlash/> : <FaEye />
               }
             </p>
+            {
+              error && <div className="text-red-500 text-sm mt-2">
+                <p>{error}</p>
+              </div>
+            }
             <label className="label">
               <a href="#" className="label-text-alt link link-hover">
                 Forgot password?
