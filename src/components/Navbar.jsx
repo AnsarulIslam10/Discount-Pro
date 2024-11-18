@@ -1,23 +1,26 @@
 import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import { FiHome, FiInfo, FiUser } from "react-icons/fi";
+import { FaTags } from "react-icons/fa6";
+import Marquee from "react-fast-marquee";
 const Navbar = () => {
   const { user, signOutUser } = useContext(AuthContext);
   const links = (
     <>
       <li>
-        <NavLink to={"/"}>Home</NavLink>
+        <NavLink to={"/"}><FiHome></FiHome>Home</NavLink>
       </li>
       <li>
-        <NavLink to={"/brands"}>Brands</NavLink>
+        <NavLink to={"/brands"}><FaTags></FaTags>Brands</NavLink>
       </li>
       {user && (
         <li>
-          <NavLink to={"/my-profile"}>My Profile</NavLink>
+          <NavLink to={"/my-profile"}><FiUser></FiUser>My Profile</NavLink>
         </li>
       )}
       <li>
-        <NavLink to={"/about"}>About Dev</NavLink>
+        <NavLink to={"/about"}><FiInfo></FiInfo>About Dev</NavLink>
       </li>
     </>
   );
@@ -46,18 +49,19 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
             {links}
+            <Marquee><li className="mr-2">{user.email}</li></Marquee>
           </ul>
         </div>
-        <a className="text-3xl font-bold text-[#28b5f6]">Discount PRO</a>
+        <a className="md:text-3xl text-lg overflow-hidden sm:text-xl font-bold text-[#28b5f6]">Discount PRO</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{links}</ul>
+        <ul className="menu menu-horizontal px-1 gap-2">{links}</ul>
       </div>
       <div className="navbar-end gap-2">
         {user && user?.email ? (
           <div className="flex items-center">
             <div className="flex items-center px-2">
-            <p className="text-xs">{user.email}</p>
+            <p className="text-xs hidden md:block">{user.email}</p>
             <img className="w-10 h-10 rounded-full" src={user?.photoURL} alt="" />
             </div>
             <button onClick={signOutUser} className="btn bg-[#28b5f6] text-white">Log-Out</button>
