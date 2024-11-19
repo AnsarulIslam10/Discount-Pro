@@ -3,7 +3,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
 
 const ForgotPass = () => {
-  const { forgotPassword } = useContext(AuthContext);
+  const { forgotPassword, inputEmail, setInputEmail } = useContext(AuthContext);
   const handleSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -32,6 +32,8 @@ const ForgotPass = () => {
             <input
               type="email"
               name="email"
+              value={inputEmail}
+              onChange={(e)=> setInputEmail(e.target.value)}
               placeholder="email"
               className="input input-bordered"
               required

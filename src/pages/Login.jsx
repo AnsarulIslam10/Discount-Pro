@@ -6,11 +6,13 @@ import { toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 
 const Login = () => {
-  const { signInUser, signInWithGoogle } = useContext(AuthContext);
+  const { signInUser, signInWithGoogle, inputEmail, setInputEmail } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false)
   const [error, setError] = useState('');
   const navigate = useNavigate();
   const location = useLocation();
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -67,6 +69,8 @@ const Login = () => {
             <input
               type="email"
               name="email"
+              value={inputEmail}
+              onChange={(e)=> setInputEmail(e.target.value)}
               placeholder="email"
               className="input input-bordered"
               required

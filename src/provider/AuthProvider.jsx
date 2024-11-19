@@ -9,6 +9,9 @@ const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
     const googleProvider = new GoogleAuthProvider();
+
+    const [inputEmail, setInputEmail] = useState("")
+
     const createUser = (email, password) =>{
         setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
@@ -55,7 +58,9 @@ const AuthProvider = ({children}) => {
         signInWithGoogle,
         signOutUser,
         updateUserProfile,
-        forgotPassword
+        forgotPassword,
+        inputEmail,
+        setInputEmail
     }
     return (
        <AuthContext.Provider value={authInfo}>
