@@ -6,6 +6,9 @@ import { FaTags } from "react-icons/fa6";
 import Marquee from "react-fast-marquee";
 const Navbar = () => {
   const { user, signOutUser } = useContext(AuthContext);
+  const handleLocalstorage =()=>{
+    localStorage.clear()
+  }
   const links = (
     <>
       <li>
@@ -68,7 +71,7 @@ const Navbar = () => {
           </div>
         ) : (
           <div className="flex gap-2">
-            <NavLink
+            <NavLink onClick={handleLocalstorage }
               to={"/login"}
               className={({ isActive }) =>
                 `btn btn-ghost rounded-md ${

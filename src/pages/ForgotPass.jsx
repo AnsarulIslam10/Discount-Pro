@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
 
@@ -15,6 +15,7 @@ const ForgotPass = () => {
     forgotPassword(email)
     .then(()=> {
         toast.success('Password reset email sent')
+          window.open("https://mail.google.com/", "_blank")
     }).catch(err => {
         toast.error(err.message)
     })
@@ -37,11 +38,9 @@ const ForgotPass = () => {
             />
           </div>
           <div className="form-control mt-6">
-            <a href="https://mail.google.com/" target="_blank">
             <button className="btn w-full bg-[#28b5f6] text-white">
             Sent password reset email
-            </button>
-            </a>
+            </button>      
           </div>
         </form>
       </div>
