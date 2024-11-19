@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import ReactStars from "react-rating-stars-component";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { toast } from "react-toastify";
+import { FaCopy, FaRocket } from "react-icons/fa6";
 const BrandDetails = () => {
   const { brand_name, brand_logo, rating, coupons, shop_link } =
     useLoaderData();
@@ -27,7 +28,6 @@ const BrandDetails = () => {
           </div>
         </div>
       </div>
-      {/* coupons cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-8 gap-6">
         {coupons.map((coupon, idx) => (
           <div
@@ -61,10 +61,10 @@ const BrandDetails = () => {
                 text={coupon.coupon_code}
                 onCopy={handleCopy}
               >
-              <button className="btn">Copy Code</button>
+              <button className="btn">Copy Code<FaCopy/></button>
               </CopyToClipboard>
               <a href={shop_link} target="_blank" className="btn">
-                Use Now
+                Use Now<FaRocket/>
               </a>
             </div>
           </div>
