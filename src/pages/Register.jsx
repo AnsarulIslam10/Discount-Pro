@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
@@ -8,7 +8,6 @@ import { FaEye, FaEyeSlash } from "react-icons/fa6";
 const Register = () => {
   const {createUser, setUser, updateUserProfile, signInWithGoogle} = useContext(AuthContext);
   const navigate = useNavigate()
-  const location = useLocation();
   const [error, setError] = useState('');
   const [showPassword, setShowPassword] = useState(false)
   const handleSubmit = (e) =>{
@@ -39,7 +38,7 @@ const Register = () => {
         setUser(user);
         updateUserProfile({displayName: name, photoURL: photo})
         toast.success("Registration successful")
-        navigate(location?.state ? location.state : "/");
+        navigate("/");
       })
       .catch((err) => {
         console.log(err);
@@ -51,7 +50,7 @@ const Register = () => {
       .then((result) => {
         console.log(result.user);
         toast.success("Registration successful")
-        navigate(location?.state ? location.state : "/");
+        navigate("/");
       })
       .catch((err) => {
         console.log(err);
