@@ -10,7 +10,16 @@ const UpdateProfile = () => {
     e.preventDefault();
     const name = e.target.name.value;
     const photo = e.target.photo.value;
-    updateUserProfile({ displayName: name, photoURL: photo });
+    const updateData = {};
+    if (name) {
+        updateData.displayName = name;
+    }
+    if (photo) {
+        updateData.photoURL = photo;
+    }
+    if (Object.keys(updateData).length > 0) {
+        updateUserProfile(updateData)
+    }
     navigate('/my-profile');
   };
 
@@ -30,7 +39,6 @@ const UpdateProfile = () => {
               name="name"
               placeholder="username"
               className="input input-bordered"
-              required
             />
           </div>
           <div className="form-control">
@@ -44,7 +52,6 @@ const UpdateProfile = () => {
               name="photo"
               placeholder="photo"
               className="input input-bordered"
-              required
             />
           </div>
           <div className="form-control mt-6">
