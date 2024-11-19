@@ -17,7 +17,7 @@ const BrandCard = ({ brand }) => {
         </div>
         <div>
           <h2 className="text-3xl md:text-lg font-semibold">{brand.brand_name}</h2>
-          <div className="flex justify-center md:justify-normal items-center">
+          <div className="flex justify-center md:justify-normal items-center text-xs">
             <ReactStars
               count={5}
               value={brand.rating}
@@ -33,10 +33,10 @@ const BrandCard = ({ brand }) => {
         <h2 className="text-3xl hidden md:block font-semibold">
           {brand.brand_name}
         </h2>
-        <p className="max-w-lg">{brand.description}</p>
+        <p className="max-w-lg mt-3">{brand.description}</p>
       </div>
 
-      <div className="flex flex-col items-center mt-8 md:mt-0">
+      <div className="flex flex-col items-center mt-10 md:mt-0">
         {brand.isSaleOn && (
           <p className="animate__animated animate__bounce animate__infinite text-lg text-red-500 font-semibold flex items-center">
             On Sale <MdOutlineDiscount />{" "}
