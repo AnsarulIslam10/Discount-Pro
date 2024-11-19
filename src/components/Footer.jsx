@@ -2,7 +2,7 @@ import React from "react";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 const Footer = () => {
   return (
-    <footer className="footer footer-center bg-[#28b5f6] text-lg font-medium text-white rounded p-10">
+    <footer className="footer footer-center bg-[#28b5f6] text-xs sm:text-sm md:text-lg font-medium text-white rounded py-10 px-2 sm:p-10">
       <nav className="grid grid-flow-col gap-4">
         <a className="link link-hover">About us</a>
         <a className="link link-hover">Contact</a>
