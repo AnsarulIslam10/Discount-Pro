@@ -6,7 +6,7 @@ import ReactStars from "react-rating-stars-component";
 import { NavLink } from "react-router-dom";
 const BrandCard = ({ brand }) => {
   return (
-    <div className="border mb-3 p-8 flex md:flex-row flex-col text-center md:text-start md:justify-between items-center shadow-md">
+    <div className="border animate__animated animate__fadeInUp animate__fast mb-6 p-8 flex md:flex-row flex-col text-center md:text-start md:justify-between items-center shadow-md">
       <div className=" flex flex-col text-center items-center gap-4">
         <div className="border h-24 flex justify-center items-center p-2 rounded-xl">
           <img
@@ -16,7 +16,7 @@ const BrandCard = ({ brand }) => {
           />
         </div>
         <div>
-          <h2 className="text-lg font-semibold">{brand.brand_name}</h2>
+          <h2 className="text-3xl md:text-lg font-semibold">{brand.brand_name}</h2>
           <div className="flex justify-center md:justify-normal items-center">
             <ReactStars
               count={5}
@@ -30,10 +30,10 @@ const BrandCard = ({ brand }) => {
       </div>
 
       <div className="text-center md:space-y-4">
-        <h2 className="text-lg hidden md:block font-semibold">
+        <h2 className="text-3xl hidden md:block font-semibold">
           {brand.brand_name}
         </h2>
-        <p>{brand.description}</p>
+        <p className="max-w-lg">{brand.description}</p>
       </div>
 
       <div className="flex flex-col items-center mt-8 md:mt-0">

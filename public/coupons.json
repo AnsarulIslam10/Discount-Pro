@@ -308,7 +308,7 @@
   {
     "_id": "9",
     "brand_name": "Pathao",
-    "rating": 4.4,
+    "rating": 4.5,
     "description": "A popular on-demand delivery service in Bangladesh.",
     "brand_logo": "https://i.ibb.co.com/X8r1knQ/Pathao-Here-with-You.png",
     "coupons": [
@@ -454,7 +454,7 @@
   {
     "_id": "13",
     "brand_name": "Chaldal",
-    "rating": 4.6,
+    "rating": 4.4,
     "description": "Bangladesh’s leading online grocery delivery platform.",
     "brand_logo": "https://i.ibb.co.com/JsVhG6b/chaldal.png",
     "coupons": [

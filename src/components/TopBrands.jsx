@@ -7,15 +7,16 @@ const TopBrands = () => {
   console.log(brands);
 
   return (
-    <div>
-      <h2 className="text-4xl font-semibold text-center mt-14 mb-8">
+    <div className="my-24">
+      <h2 className="text-4xl font-bold text-center mb-2">
         Top Brands
       </h2>
+      <p className="text-center mb-8 text-gray-500">Discover the brands with the highest ratings and top customer reviews.</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-6">
         {brands
           .filter((brand) => brand.rating >= 4.5)
           .map((brand) => (
-            <div className="border p-4" key={brand._id}>
+            <div className="border p-4 animate__animated animate__fadeIn animate__slow" key={brand._id}>
               <h3 className="text-lg font-semibold">{brand.brand_name}</h3>
               <div className="flex justify-center md:justify-normal items-center">
                 <ReactStars
@@ -33,7 +34,7 @@ const TopBrands = () => {
         <Marquee
           pauseOnHover={true}
           speed={200}
-          className="cursor-pointer flex space-x-10 items-center justify-center py-6 border-2 shadow-md"
+          className="cursor-pointer flex gap-10 items-center justify-center py-6 border-2 shadow-md"
         >
           <img
             src="https://i.ibb.co.com/drRqtdV/Daraz-Logo.png"
@@ -41,17 +42,17 @@ const TopBrands = () => {
             alt=""
           />
           <img
-            src="https://i.ibb.co.com/vJs0z9s/bikroy.png"
+            src="https://i.ibb.co.com/bvvF3Qd/KFC-Logo-wine.png"
             className="h-32"
             alt=""
           />
           <img
-            src=" https://i.ibb.co.com/X8r1knQ/Pathao-Here-with-You.png"
+            src=" https://i.ibb.co.com/nPLrSb6/BDSHOP-LOGO-TM.png"
             className="h-32"
             alt=""
           />
           <img
-            src="https://i.ibb.co.com/fSG9KXF/Chaldal-com-logo.png"
+            src="https://i.ibb.co.com/NZWr0KJ/startech.png"
             className="h-32"
             alt=""
           />
@@ -61,7 +62,22 @@ const TopBrands = () => {
             alt=""
           />
           <img
-            src="https://i.ibb.co.com/5Tpdg7N/ajkerdeal.png"
+            src="https://i.ibb.co.com/h1ZhDBT/Official-Logo-of-Ryans-Computers-Limited.png"
+            className="h-24"
+            alt=""
+          />
+          <img
+            src="https://i.ibb.co.com/X8r1knQ/Pathao-Here-with-You.png"
+            className="h-32"
+            alt=""
+          />
+          <img
+            src="https://i.ibb.co.com/VDxLCwt/asrmart.png"
+            className="h-32"
+            alt=""
+          />
+          <img
+            src="https://i.ibb.co.com/XXBfkhy/megamart.png"
             className="h-32"
             alt=""
           />

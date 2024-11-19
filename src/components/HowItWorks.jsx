@@ -5,10 +5,10 @@ const HowItWorks = () => {
     return (
         <div className='my-24'>
            <div className='text-center'>
-           <h2 className='text-4xl font-semibold'>How Discount Pro Works</h2>
-           <p className='text-sm text-gray-500 px-10 mt-2 mb-8'>Saving has never been easier. Follow these simple steps to start getting discounts on your favorite brands!</p>
+           <h2 className='text-4xl font-bold'>How Discount Pro Works</h2>
+           <p className='text-gray-500 px-10 mt-2 mb-8'>Saving has never been easier. Follow these simple steps to start getting discounts on your favorite brands!</p>
            </div>
-            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 animate__animated animate__fadeIn animate__fast'>
                 <div className='p-6 h-64 border rounded-xl'>
                     <div className='bg-blue-200 h-28 flex justify-center items-center rounded-md text-3xl mb-3'>
                         <FaSearch></FaSearch>

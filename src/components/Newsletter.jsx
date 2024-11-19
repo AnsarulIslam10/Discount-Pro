@@ -2,7 +2,7 @@ import React from "react";
 
 const Newsletter = () => {
   return (
-    <div className="hero mb-12 rounded-xl" style={{
+    <div className="hero my-24 rounded-xl" style={{
         backgroundImage: `url('https://i.ibb.co.com/dJvCnWp/snowflick.jpg')`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
