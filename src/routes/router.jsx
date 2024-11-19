@@ -9,6 +9,7 @@ import PrivateRoute from "./PrivateRoute";
 import BrandDetails from "../components/BrandDetails";
 import ErrorPage from "../pages/ErrorPage";
 import ForgotPass from "../pages/ForgotPass";
+import UpdateProfile from "../pages/UpdateProfile";
 
 const router = createBrowserRouter([
     {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
         {
           path: '/my-profile',
           element: <PrivateRoute><Profile></Profile></PrivateRoute>
+        },
+        {
+          path: '/update-profile',
+          element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
         },
         {
           path: '/brand/:id',

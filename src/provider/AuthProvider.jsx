@@ -30,8 +30,10 @@ const AuthProvider = ({children}) => {
         return signOut(auth)
     }
 
-    const updateUserProfile = (updateData) => {
-        return updateProfile(auth.currentUser, updateData)
+    const updateUserProfile =(updateData) => {
+        updateProfile(auth.currentUser, updateData)
+        setUser({...auth.currentUser, ...updateData})
+        toast.success("Profile updated successfully")
     }
 
     const forgotPassword = (email) => {

@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
+import { Link } from "react-router-dom";
 
 const Profile = () => {
   const { user } = useContext(AuthContext);
@@ -24,9 +25,9 @@ const Profile = () => {
         />
         <h2 className="text-2xl mb-2 font-semibold">{user.displayName}</h2>
         <p className="text-gray-500">{user.email}</p>
-        <button className="btn bg-[#28B5F6] text-white mt-6">
+        <Link to={'/update-profile'} className="btn bg-[#28B5F6] text-white mt-6">
           Update Profile
-        </button>
+        </Link>
       </div>
     </div>
   );
