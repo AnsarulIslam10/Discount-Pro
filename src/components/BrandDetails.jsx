@@ -36,7 +36,7 @@ const BrandDetails = () => {
         {coupons.map((coupon, idx) => (
           <div
             key={idx}
-            className="border flex flex-col justify-between h-full p-6 space-y-1 text-gray-600"
+            className="border shadow-md rounded-xl flex flex-col justify-between h-full p-6 space-y-1 text-gray-600"
           >
             <div className="mb-4">
               <h3 className="text-xl text-black font-semibold mb-2">
@@ -62,12 +62,12 @@ const BrandDetails = () => {
 
             <div className="flex flex-col gap-2">
               <CopyToClipboard text={coupon.coupon_code} onCopy={handleCopy}>
-                <button className="btn">
+                <button className="btn bg-[#28b5f6] hover:bg-[#1d93ca] text-white">
                   Copy Code
                   <FaCopy />
                 </button>
               </CopyToClipboard>
-              <a href={shop_link} target="_blank" className="btn">
+              <a href={shop_link} target="_blank" className="btn btn-outline border-[#28b5f6] text-[#28b5f6]">
                 Use Now
                 <FaRocket />
               </a>
