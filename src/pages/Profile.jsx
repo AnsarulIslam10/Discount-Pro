@@ -25,7 +25,7 @@ const Profile = () => {
       </div>
       <div className="p-4 relative -top-24 flex flex-col justify-center items-center">
         <img
-          className="w-56 h-56 object-cover rounded-full border-8 border-white"
+          className="w-56 bg-white h-56 object-cover rounded-full border-8 border-white mb-4"
           src={user.photoURL}
           alt=""
         />
@@ -33,7 +33,7 @@ const Profile = () => {
         <p className="text-gray-500">{user.email}</p>
         <Link
           to={"/update-profile"}
-          className="btn bg-[#28B5F6] text-white mt-6"
+          className="btn bg-[#28B5F6] border-none text-white mt-6"
         >
           Update Profile
         </Link>
