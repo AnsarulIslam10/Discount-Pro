@@ -6,11 +6,11 @@ import { Helmet } from "react-helmet-async";
 const Profile = () => {
   const { user } = useContext(AuthContext);
   return (
-    <div className="border md:w-8/12 mb-24 mx-auto bg-blue-100 rounded-xl mt-12">
+    <div className="border md:w-8/12 mb-24 mx-auto bg-blue-50 shadow-md rounded-xl mt-12">
       <Helmet>
         <title>Profile | Discount Pro</title>
       </Helmet>
-      <div
+      <div 
         className="h-60 flex justify-center rounded-t-xl items-center"
         style={{
           backgroundImage: `url('https://i.ibb.co.com/8zgGM7H/eb2008831992ed678bf4246d3b6e1b5d.gif')`,
@@ -25,7 +25,7 @@ const Profile = () => {
       </div>
       <div className="p-4 relative -top-24 flex flex-col justify-center items-center">
         <img
-          className="w-56 bg-white h-56 object-cover rounded-full border-8 border-white mb-4"
+          className="w-56 bg-white p-1 h-56 object-cover rounded-full border-4 border-blue-500 mb-4"
           src={user.photoURL}
           alt=""
         />
