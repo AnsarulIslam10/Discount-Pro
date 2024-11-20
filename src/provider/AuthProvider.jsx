@@ -33,7 +33,6 @@ const AuthProvider = ({children}) => {
     const updateUserProfile =(updateData) => {
         updateProfile(auth.currentUser, updateData)
         setUser({...auth.currentUser, ...updateData})
-        toast.success("Profile updated successfully")
     }
 
     const forgotPassword = (email) => {

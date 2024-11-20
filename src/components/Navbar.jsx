@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { FiHome, FiInfo, FiUser } from "react-icons/fi";
-import { FaTags } from "react-icons/fa6";
+import { LuTags } from "react-icons/lu";
 import Marquee from "react-fast-marquee";
 const Navbar = () => {
   const { user, signOutUser } = useContext(AuthContext);
@@ -12,18 +12,18 @@ const Navbar = () => {
   const links = (
     <>
       <li>
-        <NavLink to={"/"}><FiHome></FiHome>Home</NavLink>
+        <NavLink to={"/"} className={({isActive}) => `btn btn-sm btn-ghost font-medium rounded-md hover:bg-[#65c4f0] ${isActive ? "bg-[#28b5f6] text-white" : ""}`}><FiHome></FiHome>Home</NavLink>
       </li>
       <li>
-        <NavLink to={"/brands"}><FaTags></FaTags>Brands</NavLink>
+        <NavLink to={"/brands"} className={({isActive}) => `btn btn-sm btn-ghost font-medium  hover:bg-[#65c4f0] rounded-md ${isActive ? "bg-[#28b5f6] text-white" : ""}`}><LuTags></LuTags>Brands</NavLink>
       </li>
       {user && (
         <li>
-          <NavLink to={"/my-profile"}><FiUser></FiUser>My Profile</NavLink>
+          <NavLink to={"/my-profile"} className={({isActive}) => `btn btn-sm btn-ghost font-medium  hover:bg-[#65c4f0] rounded-md ${isActive ? "bg-[#28b5f6] text-white" : ""}`}><FiUser></FiUser>My Profile</NavLink>
         </li>
       )}
       <li>
-        <NavLink to={"/about"}><FiInfo></FiInfo>About Dev</NavLink>
+        <NavLink to={"/about"} className={({isActive}) => `btn btn-sm btn-ghost font-medium  hover:bg-[#65c4f0] rounded-md ${isActive ? "bg-[#28b5f6] text-white" : ""}`}><FiInfo></FiInfo>About Dev</NavLink>
       </li>
     </>
   );

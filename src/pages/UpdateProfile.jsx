@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import { useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const UpdateProfile = () => {
   const { updateUserProfile } = useContext(AuthContext);
@@ -19,6 +20,7 @@ const UpdateProfile = () => {
     }
     if (Object.keys(updateData).length > 0) {
         updateUserProfile(updateData)
+        toast.success("Profile updated successfully")
     }
     navigate('/my-profile');
   };
