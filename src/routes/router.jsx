@@ -10,6 +10,7 @@ import BrandDetails from "../components/BrandDetails";
 import ErrorPage from "../pages/ErrorPage";
 import ForgotPass from "../pages/ForgotPass";
 import UpdateProfile from "../pages/UpdateProfile";
+import About from "../pages/About";
 
 const router = createBrowserRouter([
     {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
         {
           path: '/my-profile',
           element: <PrivateRoute><Profile></Profile></PrivateRoute>
+        },
+        {
+          path: '/about',
+          element: <About></About>
         },
         {
           path: '/update-profile',
