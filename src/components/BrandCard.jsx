@@ -6,7 +6,7 @@ import ReactStars from "react-rating-stars-component";
 import { NavLink } from "react-router-dom";
 const BrandCard = ({ brand }) => {
   return (
-    <div className="border animate__animated animate__fadeInUp animate__fast mb-6 p-8 flex md:flex-row flex-col text-center md:text-start md:justify-between items-center shadow-md">
+    <div  data-aos="fade-up" className="mb-6 p-8 flex md:flex-row flex-col text-center md:text-start md:justify-between items-center shadow-md">
       <div className=" flex flex-col text-center items-center gap-4">
         <div className="border h-24 flex justify-center items-center p-2 rounded-xl">
           <img
