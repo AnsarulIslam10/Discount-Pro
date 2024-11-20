@@ -58,7 +58,7 @@ const Navbar = () => {
         <a className="md:text-3xl text-lg overflow-hidden sm:text-xl font-bold text-[#28b5f6]">Discount PRO</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 gap-1">{links}</ul>
+        <ul className="menu menu-horizontal gap-1">{links}</ul>
       </div>
       <div className="navbar-end gap-2">
         {user && user?.email ? (
@@ -67,7 +67,7 @@ const Navbar = () => {
             <p className="text-xs hidden md:block">{user.email}</p>
             <img className="w-10 h-10 p-1 rounded-full" src={user?.photoURL} alt="" />
             </div>
-            <button onClick={signOutUser} className="btn bg-[#28b5f6] text-white">Log-Out</button>
+            <button onClick={signOutUser} className="px-2 py-2 rounded-md font-semibold bg-[#28b5f6] text-sm text-white">Logout</button>
           </div>
         ) : (
           <div className="flex gap-2">
