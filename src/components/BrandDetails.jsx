@@ -8,7 +8,6 @@ import { Helmet } from "react-helmet-async";
 const BrandDetails = () => {
   const { brand_name, brand_logo, rating, coupons, shop_link } =
     useLoaderData();
-  console.log(brand_name);
   const handleCopy = () => {
     toast.success("Coupon code copied to clipboard");
   };

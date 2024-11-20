@@ -18,7 +18,6 @@ const Register = () => {
     const email = e.target.email.value;
     const photo = e.target.photo.value;
     const password = e.target.password.value;
-    console.log(name, email, password);
 
     setError("");
     if (password.length < 6) {
@@ -43,19 +42,16 @@ const Register = () => {
         navigate("/");
       })
       .catch((err) => {
-        console.log(err);
         toast.error(err.message);
       });
   };
   const handleGoogleSignIn = () => {
     signInWithGoogle()
       .then((result) => {
-        console.log(result.user);
         toast.success("Registration successful");
         navigate("/");
       })
       .catch((err) => {
-        console.log(err);
         toast.error(err.message);
       });
   };

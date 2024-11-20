@@ -18,7 +18,6 @@ const Login = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email, password);
 
     setError("");
     if (password.length < 6) {
@@ -36,24 +35,21 @@ const Login = () => {
 
     signInUser(email, password)
       .then((result) => {
-        console.log(result.user);
         toast.success("Login successful");
         navigate(location?.state ? location.state : "/");
       })
       .catch((err) => {
-        console.log(err);
+        toast.error(err.message);
       });
   };
 
   const handleGoogleSignIn = () => {
     signInWithGoogle()
       .then((result) => {
-        console.log(result.user);
         toast.success("Login successful");
         navigate(location?.state ? location.state : "/");
       })
       .catch((err) => {
-        console.log(err);
         toast.error(err.message);
       });
   };

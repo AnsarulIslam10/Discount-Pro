@@ -4,7 +4,6 @@ import { Link, useLoaderData } from "react-router-dom";
 import ReactStars from "react-rating-stars-component";
 const TopBrands = () => {
   const brands = useLoaderData();
-  console.log(brands);
 
   return (
     <div className="my-24">

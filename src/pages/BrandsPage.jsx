@@ -10,8 +10,7 @@ const BrandsPage = () => {
   const searchedBrands = brands.filter((brand) => 
     brand.brand_name.toLowerCase().includes(search.toLowerCase())
   );
-  
-  console.log(brands);
+
   return (
     <div className="mt-8 mb-24">
       <Helmet>
