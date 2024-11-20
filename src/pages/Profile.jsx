@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 const Profile = () => {
   const { user } = useContext(AuthContext);
   return (
-    <div className="border bg-blue-100 rounded-xl mt-12">
+    <div className="border md:w-8/12 mb-24 mx-auto bg-blue-100 rounded-xl mt-12">
       <div
-        className="h-56 flex justify-center rounded-t-xl items-center"
+        className="h-60 flex justify-center rounded-t-xl items-center"
         style={{
           backgroundImage: `url('https://i.ibb.co.com/8zgGM7H/eb2008831992ed678bf4246d3b6e1b5d.gif')`,
           backgroundRepeat: 'no-repeat',
@@ -15,7 +15,7 @@ const Profile = () => {
           backgroundPosition: 'center'
         }}
       >
-        <h2 className="text-3xl font-semibold text-white">Welcome to your profile</h2>
+        <h2 className="md:text-3xl text-xl sm:text-2xl font-semibold text-white">Welcome to your profile</h2>
       </div>
       <div className="p-4 relative -top-24 flex flex-col justify-center items-center">
         <img
