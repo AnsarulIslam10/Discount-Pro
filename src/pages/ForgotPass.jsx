@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 const ForgotPass = () => {
   const { forgotPassword, inputEmail, setInputEmail } = useContext(AuthContext);
@@ -22,6 +23,9 @@ const ForgotPass = () => {
   };
   return (
     <div className="flex justify-center items-center py-32">
+       <Helmet>
+        <title>Forgot Password | Discount Pro</title>
+      </Helmet>
       <div className="card bg-base-100 w-full max-w-lg rounded-none p-10 shrink-0 shadow-2xl">
         <h2 className="text-4xl font-semibold text-center">Forgot Password?</h2>
         <form onSubmit={handleSubmit} className="card-body">

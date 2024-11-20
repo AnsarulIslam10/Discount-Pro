@@ -4,15 +4,19 @@ import ReactStars from "react-rating-stars-component";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { toast } from "react-toastify";
 import { FaCopy, FaRocket } from "react-icons/fa6";
+import { Helmet } from "react-helmet-async";
 const BrandDetails = () => {
   const { brand_name, brand_logo, rating, coupons, shop_link } =
     useLoaderData();
   console.log(brand_name);
-  const handleCopy =()=>{
-    toast.success('Coupon code copied to clipboard')
-  }
+  const handleCopy = () => {
+    toast.success("Coupon code copied to clipboard");
+  };
   return (
     <div className="mt-8 mb-8">
+      <Helmet>
+        <title>Brand Coupons | Discount Pro</title>
+      </Helmet>
       <div className="flex flex-col items-center justify-center gap-4 shadow-md border p-4">
         <img className="w-56" src={brand_logo} alt="" />
         <div className="flex flex-col justify-center items-center">
@@ -57,14 +61,15 @@ const BrandDetails = () => {
             </div>
 
             <div className="flex flex-col gap-2">
-              <CopyToClipboard
-                text={coupon.coupon_code}
-                onCopy={handleCopy}
-              >
-              <button className="btn">Copy Code<FaCopy/></button>
+              <CopyToClipboard text={coupon.coupon_code} onCopy={handleCopy}>
+                <button className="btn">
+                  Copy Code
+                  <FaCopy />
+                </button>
               </CopyToClipboard>
               <a href={shop_link} target="_blank" className="btn">
-                Use Now<FaRocket/>
+                Use Now
+                <FaRocket />
               </a>
             </div>
           </div>

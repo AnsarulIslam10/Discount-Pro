@@ -4,14 +4,15 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
-  const { signInUser, signInWithGoogle, inputEmail, setInputEmail } = useContext(AuthContext);
-  const [showPassword, setShowPassword] = useState(false)
-  const [error, setError] = useState('');
+  const { signInUser, signInWithGoogle, inputEmail, setInputEmail } =
+    useContext(AuthContext);
+  const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
-
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,17 +20,17 @@ const Login = () => {
     const password = e.target.password.value;
     console.log(email, password);
 
-    setError('')
+    setError("");
     if (password.length < 6) {
-      setError("Password must be at least 6 charecters long.")
+      setError("Password must be at least 6 charecters long.");
       return;
     }
     if (!/[a-z]/.test(password)) {
-      setError("Password must contain at least one lowercase letter")
+      setError("Password must contain at least one lowercase letter");
       return;
     }
     if (!/[A-Z]/.test(password)) {
-      setError("Password must contain at least one Uppercase letter")
+      setError("Password must contain at least one Uppercase letter");
       return;
     }
 
@@ -59,6 +60,9 @@ const Login = () => {
 
   return (
     <div className="flex justify-center items-center py-32">
+      <Helmet>
+        <title>Login | Discount Pro</title>
+      </Helmet>
       <div className="card bg-base-100 w-full max-w-lg rounded-none p-10 shrink-0 shadow-2xl">
         <h2 className="text-4xl font-semibold text-center">Login</h2>
         <form onSubmit={handleSubmit} className="card-body">
@@ -70,7 +74,7 @@ const Login = () => {
               type="email"
               name="email"
               value={inputEmail}
-              onChange={(e)=> setInputEmail(e.target.value)}
+              onChange={(e) => setInputEmail(e.target.value)}
               placeholder="email"
               className="input input-bordered"
               required
@@ -87,18 +91,23 @@ const Login = () => {
               className="input input-bordered"
               required
             />
-            <p onClick={()=> setShowPassword(!showPassword)} className="absolute right-4 text-gray-600 top-[60px]">
-              {
-                showPassword ? <FaEyeSlash/> : <FaEye />
-              }
+            <p
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute right-4 text-gray-600 top-[60px]"
+            >
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
             </p>
-            {
-              error && <div className="text-red-500 text-sm mt-2">
+            {error && (
+              <div className="text-red-500 text-sm mt-2">
                 <p>{error}</p>
               </div>
-            }
+            )}
             <label className="label">
-              <Link to={'/forgot-password'} href="#" className="label-text-alt link link-hover">
+              <Link
+                to={"/forgot-password"}
+                href="#"
+                className="label-text-alt link link-hover"
+              >
                 Forgot password?
               </Link>
             </label>

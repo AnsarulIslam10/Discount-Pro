@@ -2,10 +2,11 @@ import React, { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 const UpdateProfile = () => {
   const { updateUserProfile } = useContext(AuthContext);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleUpdateProfile = (e) => {
     e.preventDefault();
@@ -13,20 +14,23 @@ const UpdateProfile = () => {
     const photo = e.target.photo.value;
     const updateData = {};
     if (name) {
-        updateData.displayName = name;
+      updateData.displayName = name;
     }
     if (photo) {
-        updateData.photoURL = photo;
+      updateData.photoURL = photo;
     }
     if (Object.keys(updateData).length > 0) {
-        updateUserProfile(updateData)
-        toast.success("Profile updated successfully")
+      updateUserProfile(updateData);
+      toast.success("Profile updated successfully");
     }
-    navigate('/my-profile');
+    navigate("/my-profile");
   };
 
   return (
     <div className="flex justify-center items-center py-32">
+      <Helmet>
+        <title>Update Profile | Discount Pro</title>
+      </Helmet>
       <div className="card bg-base-100 w-full max-w-lg rounded-none p-10 shrink-0 shadow-2xl">
         <h2 className="text-4xl font-semibold text-center">
           Update Your Profile
