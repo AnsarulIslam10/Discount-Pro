@@ -27,12 +27,12 @@ const UpdateProfile = () => {
   };
 
   return (
-    <div className="flex justify-center items-center py-32">
+    <div className="flex justify-center items-center md:py-32 py-8 sm:py-20">
       <Helmet>
         <title>Update Profile | Discount Pro</title>
       </Helmet>
-      <div className="card bg-base-100 w-full max-w-lg rounded-none p-10 shrink-0 shadow-2xl">
-        <h2 className="text-4xl font-semibold text-center">
+      <div className="card bg-base-100 w-full max-w-lg rounded-none sm:p-10 py-6 shrink-0 shadow-blue-200  shadow-2xl">
+        <h2 className="sm:text-4xl text-2xl font-semibold text-center">
           Update Your Profile
         </h2>
         <form onSubmit={handleUpdateProfile} className="card-body">

@@ -58,11 +58,11 @@ const Navbar = () => {
             <button onClick={signOutUser} className="px-2 py-2 rounded-md font-semibold bg-[#28b5f6] text-sm text-white">Logout</button>
           </div>
         ) : (
-          <div className="flex gap-2">
+          <div className="flex gap-1 sm:gap-2">
             <NavLink onClick={handleLocalstorage }
               to={"/login"}
               className={({ isActive }) =>
-                `btn btn-ghost rounded-md ${
+                `btn-sm btn sm:btn-md px-2 sm:px-3 btn-ghost rounded-md ${
                   isActive
                     ? " bg-[#28b5f6] text-white"
                     : "border-[#28b5f6] text-[#28b5f6] border-2"
@@ -74,7 +74,7 @@ const Navbar = () => {
             <NavLink
               to={"/register"}
               className={({ isActive }) =>
-                `btn btn-ghost rounded-md ${
+                `btn-sm btn sm:btn-md px-2 sm:px-3 btn-ghost rounded-md ${
                   isActive
                     ? " bg-[#28b5f6] text-white"
                     : "border-[#28b5f6] text-[#28b5f6] border-2"

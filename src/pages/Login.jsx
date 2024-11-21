@@ -55,11 +55,11 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center items-center py-32">
+    <div className="flex justify-center items-center md:py-32 py-8 sm:py-20">
       <Helmet>
         <title>Login | Discount Pro</title>
       </Helmet>
-      <div className="card bg-base-100 w-full max-w-lg rounded-none p-10 shrink-0 shadow-2xl">
+      <div className="card bg-base-100 w-full max-w-lg rounded-none sm:p-10 py-6 shrink-0 shadow-blue-200 shadow-2xl">
         <h2 className="text-4xl font-semibold text-center">Login</h2>
         <form onSubmit={handleSubmit} className="card-body">
           <div className="form-control">
@@ -122,7 +122,7 @@ const Login = () => {
             Google
           </button>
         </div>
-        <p className="text-center font-semibold">
+        <p className="text-center text-sm sm:text-base font-semibold">
           Don't Have an Account?{" "}
           <Link className="text-red-500 hover:underline" to={"/register"}>
             Register
