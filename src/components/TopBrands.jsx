@@ -15,7 +15,7 @@ const TopBrands = () => {
         {brands
           .filter((brand) => brand.rating >= 4.5)
           .map((brand) => (
-            <div  data-aos="fade-up" className="border p-4" key={brand._id}>
+            <div className="border p-4 flex flex-col items-center sm:items-start" key={brand._id}>
               <h3 className="text-lg font-semibold">{brand.brand_name}</h3>
               <div className="flex justify-center md:justify-normal items-center">
                 <ReactStars

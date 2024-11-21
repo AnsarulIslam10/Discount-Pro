@@ -17,11 +17,11 @@ const BrandCard = ({ brand }) => {
         </div>
         <div>
           <h2 className="text-3xl md:text-lg font-semibold">{brand.brand_name}</h2>
-          <div className="flex justify-center md:justify-normal items-center text-xs">
+          <div className="flex justify-center md:justify-normal items-center text-sm">
             <ReactStars
               count={5}
               value={brand.rating}
-              size={24}
+              size={20}
               activeColor="#ffd700"
             />
             <p>({brand.rating})</p>
@@ -33,7 +33,7 @@ const BrandCard = ({ brand }) => {
         <h2 className="text-3xl hidden md:block font-semibold">
           {brand.brand_name}
         </h2>
-        <p className="max-w-lg mt-3">{brand.description}</p>
+        <p className="max-w-lg px-3 mt-3">{brand.description}</p>
       </div>
 
       <div className="flex flex-col items-center mt-10 md:mt-0">

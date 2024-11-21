@@ -16,7 +16,7 @@ const BrandDetails = () => {
       <Helmet>
         <title>Brand Coupons | Discount Pro</title>
       </Helmet>
-      <div className="flex flex-col items-center justify-center gap-4 shadow-md border p-4">
+      <div className="flex flex-col items-center justify-center gap-4 shadow-md shadow-blue-200 border p-4">
         <img className="w-56" src={brand_logo} alt="" />
         <div className="flex flex-col justify-center items-center">
           <h2 className="text-2xl font-semibold">{brand_name}</h2>
@@ -35,13 +35,14 @@ const BrandDetails = () => {
         {coupons.map((coupon, idx) => (
           <div
             key={idx}
-            className="border shadow-md rounded-xl flex flex-col justify-between h-full p-6 space-y-1 text-gray-600"
+            className="border cursor-default hover:scale-105 transition-all duration-200  shadow-blue-200 shadow-md rounded-xl flex flex-col justify-between h-full p-6 space-y-1 text-gray-600"
           >
             <div className="mb-4">
-              <h3 className="text-xl text-black font-semibold mb-2">
+              <h3 className="text-2xl text-black font-semibold mb-4">
                 {coupon.description}
               </h3>
-              <p>
+             <div className="p-3 bg-gray-50 shadow-inner border shadow-blue-200 space-y-1 rounded-xl">
+             <p>
                 <span className="font-medium text-black">Description:</span>{" "}
                 {coupon.description}
               </p>
@@ -57,6 +58,7 @@ const BrandDetails = () => {
                 <span className="font-medium text-black">Type:</span>{" "}
                 {coupon.coupon_type}
               </p>
+             </div>
             </div>
 
             <div className="flex flex-col gap-2">

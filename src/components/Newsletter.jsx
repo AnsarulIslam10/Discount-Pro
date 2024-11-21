@@ -10,10 +10,10 @@ const Newsletter = () => {
       }}>
       <div className="hero-content text-center py-14">
         <div className="max-w-2xl">
-          <h1 className="text-3xl text-white font-bold">
+          <h1 className="sm:text-3xl text-lg text-white font-bold">
             Subscribe for our weekly email newsletter
           </h1>
-          <p className="pt-4 pb-10 text-sm text-gray-100">
+          <p className="pt-4 pb-10 text-xs sm:text-sm text-gray-100">
             Stay updated with the latest deals, exclusive discounts, and special
             offers from your favorite brands. Subscribe now to never miss a chance
             to save big with Discount Pro!
