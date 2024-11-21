@@ -11,9 +11,9 @@ const Footer = () => {
       </nav>
       <nav>
         <div className="grid grid-flow-col text-4xl gap-4">
-          <a href="https://www.facebook.com/ansarulislamriyad" target="_blank" className="hover:scale-150 transition-all"><FaFacebook /></a>
-          <a href="https://github.com/AnsarulIslam10" target="_blank" className="hover:scale-150 transition-all"><FaGithub /></a>
-          <a href="https://www.linkedin.com/in/ansarul-islam-32a229318/" target="_blank" className="hover:scale-150 transition-all"><FaLinkedin /></a>
+          <a href="https://www.facebook.com/ansarulislamriyad" target="_blank" className="hover:scale-125 transition-all duration-200"><FaFacebook /></a>
+          <a href="https://github.com/AnsarulIslam10" target="_blank" className="hover:scale-125 transition-all duration-200"><FaGithub /></a>
+          <a href="https://www.linkedin.com/in/ansarul-islam-32a229318/" target="_blank" className="hover:scale-125 transition-all duration-200"><FaLinkedin /></a>
         </div>
       </nav>
       <aside>

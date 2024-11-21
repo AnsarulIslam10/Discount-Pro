@@ -16,7 +16,7 @@ const BrandDetails = () => {
       <Helmet>
         <title>Brand Coupons | Discount Pro</title>
       </Helmet>
-      <div className="flex flex-col items-center justify-center gap-4 shadow-md shadow-blue-200 border p-4">
+      <div className="flex flex-col items-center justify-center gap-4 shadow-md shadow-blue-100 border p-4">
         <img className="w-56" src={brand_logo} alt="" />
         <div className="flex flex-col justify-center items-center">
           <h2 className="text-2xl font-semibold">{brand_name}</h2>
@@ -41,7 +41,7 @@ const BrandDetails = () => {
               <h3 className="text-2xl text-black font-semibold mb-4">
                 {coupon.description}
               </h3>
-             <div className="p-3 bg-gray-50 shadow-inner border shadow-blue-200 space-y-1 rounded-xl">
+             <div className="p-3 bg-gray-50 shadow-inner border shadow-blue-100 space-y-1 rounded-xl">
              <p>
                 <span className="font-medium text-black">Description:</span>{" "}
                 {coupon.description}

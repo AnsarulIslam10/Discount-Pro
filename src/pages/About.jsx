@@ -3,14 +3,14 @@ import React from "react";
 const About = () => {
   return (
     <div className="mt-8 mb-24">
-      <h1 className="text-center text-4xl font-bold mb-6 underline underline-offset-8">
+      <h1 className="text-center text-2xl sm:text-3xl md:text-4xl font-bold mb-6 underline underline-offset-8">
         About Me
       </h1>
-      <div data-aos="fade-up" className=" p-12 shadow-lg border rounded-xl">
-        <h2 className="text-3xl mb-3 font-semibold">
+      <div className="sm:p-12 p-4 shadow-blue-100 shadow-md border rounded-md">
+        <h2 className="text-xl sm:text-2xl md:text-3xl mb-3 font-semibold">
           Hi, I’m Ansarul Islam Riyad
         </h2>
-        <p className="text-gray-600 mx-auto">
+        <p className="text-gray-600 text-xs sm:text-sm md:text-base mx-auto">
           I’m a web development student at{" "}
           <span className="text-purple-500 font-medium">Programming Hero.</span>{" "}
           Currently, I’m focused on building user-friendly, responsive websites
@@ -22,11 +22,11 @@ const About = () => {
           projects that showcase my growth as a developer.
         </p>
       </div>
-      <h2 className="text-3xl font-semibold text-center mt-12 mb-8">
+      <h2 className="text-2xl sm:text-3xl font-semibold text-center mt-12 mb-6">
         My Other Projects
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <div data-aos="fade-up" className="border p-6 text-center shadow-md rounded-2xl">
+        <div className="border p-6 text-center shadow-md shadow-blue-100 rounded-2xl">
           <div className="p-4 border rounded-xl h-56">
             <img
               className="h-full mx-auto"
@@ -42,7 +42,7 @@ const About = () => {
             </a>
           </button>
         </div>
-        <div data-aos="fade-up" className="border p-6 text-center shadow-md rounded-2xl">
+        <div className="border p-6 text-center shadow-md shadow-blue-100 rounded-2xl">
           <div className="p-4 border rounded-xl h-56">
             <img className="h-full mx-auto" src="https://i.ibb.co.com/6NRWMK3/bpl.png" alt="" />
           </div>
@@ -54,7 +54,7 @@ const About = () => {
             </a>
           </button>
         </div>
-        <div data-aos="fade-up" className="border p-6 text-center shadow-md rounded-2xl">
+        <div className="border p-6 text-center shadow-md shadow-blue-100 rounded-2xl">
           <div className="p-4 border rounded-xl h-56">
             <img className="h-full mx-auto" src="https://i.ibb.co.com/pPkr8LC/pet.png" alt="" />
           </div>
@@ -69,7 +69,7 @@ const About = () => {
             </a>
           </button>
         </div>
-        <div data-aos="fade-up" className="border p-6 text-center shadow-md rounded-2xl">
+        <div className="border p-6 text-center shadow-md shadow-blue-100 rounded-2xl">
           <div className="p-4 border rounded-xl h-56">
             <img className="h-full mx-auto" src="https://i.ibb.co.com/Fnf0X9r/chef.png" alt="" />
           </div>

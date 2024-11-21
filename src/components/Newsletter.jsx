@@ -2,12 +2,7 @@ import React from "react";
 
 const Newsletter = () => {
   return (
-    <div className="hero my-24 rounded-xl" style={{
-        backgroundImage: `url('https://i.ibb.co.com/dJvCnWp/snowflick.jpg')`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}>
+    <div className="hero my-24 rounded-xl bg-gradient-to-br from-[#28B5F6] to-[#60cdff] ">
       <div className="hero-content text-center py-14">
         <div className="max-w-2xl">
           <h1 className="sm:text-3xl text-lg text-white font-bold">
@@ -22,9 +17,9 @@ const Newsletter = () => {
             <input
               type="email"
               placeholder="Enter your email"
-              className="input rounded-l-full rounded-r-none w-full max-w-xs"
+              className="input shadow-md rounded-l-full rounded-r-none w-full max-w-xs"
             />
-            <button className="btn bg-[#28b5f6] text-white border-none rounded-r-full">Subscribe</button>
+            <button className="btn bg-[#28b5f6] shadow-md hover:bg-[#209bd4] text-white border-none rounded-r-full">Subscribe</button>
           </div>
         </div>
       </div>

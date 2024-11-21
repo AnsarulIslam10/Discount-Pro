@@ -33,7 +33,7 @@ const TopBrands = () => {
         <Marquee
           pauseOnHover={true}
           speed={200}
-          className="cursor-pointer flex gap-10 items-center justify-center py-6 border-2 shadow-md"
+          className="cursor-pointer flex gap-10 items-center justify-center py-6 border-2 shadow-md shadow-blue-100"
         >
           <img
             src="https://i.ibb.co.com/drRqtdV/Daraz-Logo.png"

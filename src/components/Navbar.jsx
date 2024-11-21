@@ -4,6 +4,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import { FiHome, FiInfo, FiUser } from "react-icons/fi";
 import { LuTags } from "react-icons/lu";
 import Marquee from "react-fast-marquee";
+import { FaBars } from "react-icons/fa6";
 const Navbar = () => {
   const { user, signOutUser } = useContext(AuthContext);
   const handleLocalstorage =()=>{
@@ -28,24 +29,11 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar px-0 bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
+          <div tabIndex={0} role="button" className="btn mr-1 px-0 btn-ghost lg:hidden">
+            <FaBars/>
           </div>
           <ul
             tabIndex={0}
