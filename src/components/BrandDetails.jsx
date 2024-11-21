@@ -12,7 +12,7 @@ const BrandDetails = () => {
     toast.success("Coupon code copied to clipboard");
   };
   return (
-    <div className="mt-8 mb-8">
+    <div className="mt-8 mb-24">
       <Helmet>
         <title>Brand Coupons | Discount Pro</title>
       </Helmet>
