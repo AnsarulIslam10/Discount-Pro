@@ -35,30 +35,32 @@ const BrandDetails = () => {
         {coupons.map((coupon, idx) => (
           <div
             key={idx}
-            className="border cursor-default hover:scale-105 transition-all duration-200  shadow-blue-200 shadow-md rounded-xl flex flex-col justify-between h-full p-6 space-y-1 text-gray-600"
+            className="border cursor-default hover:scale-105 transition-all duration-200  shadow-blue-200 shadow-md rounded-xl flex flex-col justify-between h-full p-6 space-y-6 text-gray-600"
           >
-            <div className="mb-4">
-              <h3 className="text-2xl text-black font-semibold mb-4">
+            <div>
+              <h3 className="text-2xl text-black font-semibold">
                 {coupon.description}
               </h3>
-             <div className="p-3 bg-gray-50 shadow-inner border shadow-blue-100 space-y-1 rounded-xl">
-             <p>
-                <span className="font-medium text-black">Description:</span>{" "}
-                {coupon.description}
-              </p>
-              <p>
-                <span className=" font-medium text-black">Expires:</span>{" "}
-                {coupon.expiry_date}
-              </p>
-              <p>
-                <span className="font-medium text-black">Conditions:</span>{" "}
-                {coupon.condition}
-              </p>
-              <p>
-                <span className="font-medium text-black">Type:</span>{" "}
-                {coupon.coupon_type}
-              </p>
-             </div>
+            </div>
+            <div className="mb-4">
+              <div className="p-3 bg-blue-50 shadow-inner border shadow-blue-100 space-y-1 rounded-xl">
+                <p>
+                  <span className="font-medium text-black">Description:</span>{" "}
+                  {coupon.description}
+                </p>
+                <p>
+                  <span className=" font-medium text-black">Expires:</span>{" "}
+                  {coupon.expiry_date}
+                </p>
+                <p>
+                  <span className="font-medium text-black">Conditions:</span>{" "}
+                  {coupon.condition}
+                </p>
+                <p>
+                  <span className="font-medium text-black">Type:</span>{" "}
+                  {coupon.coupon_type}
+                </p>
+              </div>
             </div>
 
             <div className="flex flex-col gap-2">
@@ -68,7 +70,11 @@ const BrandDetails = () => {
                   <FaCopy />
                 </button>
               </CopyToClipboard>
-              <a href={shop_link} target="_blank" className="btn btn-outline border-[#28b5f6] text-[#28b5f6]">
+              <a
+                href={shop_link}
+                target="_blank"
+                className="btn btn-outline border-[#28b5f6] text-[#28b5f6]"
+              >
                 Use Now
                 <FaRocket />
               </a>
