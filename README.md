@@ -5,6 +5,12 @@ The purpose of **Discount Pro** is to help users easily find and use discount co
 
 Users can sign up or log in using their email or Google account through Firebase Authentication. Once logged in, users can browse available coupons for different brands, view details like the discount amount, expiry date, and product categories, and copy coupon codes with a single click.
 
+## Technology Used:
+- **React.js**
+- **React Router**
+- **Tailwind CSS**
+- **Firebase**
+
 ## Key Features:
 - **Coupon Listings**: A curated list of active discount coupons from multiple e-commerce platforms.
 - **Search Functionality**: Easily search for coupons to find relevant discounts.
@@ -25,4 +31,3 @@ Users can sign up or log in using their email or Google account through Firebase
 - `react-rating-stars-component`
 - `react-router-dom`
 - `react-toastify`
-
