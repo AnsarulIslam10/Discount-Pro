@@ -1,14 +1,13 @@
 # [Discount PRO | Live Link🔗](https://discount-pro-10.netlify.app/)
 
-<br>
-
-![Discount Pro](https://i.ibb.co.com/Cv5fSN5/Discount-Pro.jpg)
-
-
 ## Purpose
 The purpose of **Discount Pro** is to help users easily find and use discount coupons for popular e-commerce shops in Bangladesh. There are many e-commerce stores that provide various types of vouchers and coupon codes for discounts. Our application collects all available coupons from each store so that people can easily access discounts and save money.
 
 Users can sign up or log in using their email or Google account through Firebase Authentication. Once logged in, users can browse available coupons for different brands, view details like the discount amount, expiry date, and product categories, and copy coupon codes with a single click.
+
+<br>
+
+![Discount Pro](https://i.ibb.co.com/Cv5fSN5/Discount-Pro.jpg)
 
 ## Technology Used:
 - **React.js**
