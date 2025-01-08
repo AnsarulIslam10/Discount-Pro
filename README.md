@@ -20,14 +20,36 @@ Users can sign up or log in using their email or Google account through Firebase
 - **Brand and Store Listings**: Browse top e-commerce brands and stores offering discounts.
 - **Responsive Design**: Mobile-friendly design for seamless browsing on any device.
 
-## NPM Packages I Have Used:
+### Dependencies
 - `animate.css`
 - `aos`
 - `firebase`
+- `localforage`
+- `match-sorter`
+- `react`
 - `react-copy-to-clipboard`
+- `react-dom`
 - `react-fast-marquee`
 - `react-helmet-async`
 - `react-icons`
 - `react-rating-stars-component`
 - `react-router-dom`
 - `react-toastify`
+- `sort-by`
+
+### DevDependencies
+- `@eslint/js`
+- `@types/react`
+- `@types/react-dom`
+- `@vitejs/plugin-react`
+- `autoprefixer`
+- `daisyui`
+- `eslint`
+- `eslint-plugin-react`
+- `eslint-plugin-react-hooks`
+- `eslint-plugin-react-refresh`
+- `globals`
+- `postcss`
+- `tailwindcss`
+- `vite`
+
