@@ -1,4 +1,4 @@
-# [Discount PRO](https://discount-pro-10.netlify.app/)
+# [Discount PRO | Live Link🔗](https://discount-pro-10.netlify.app/)
 
 ## Purpose
 The purpose of **Discount Pro** is to help users easily find and use discount coupons for popular e-commerce shops in Bangladesh. There are many e-commerce stores that provide various types of vouchers and coupon codes for discounts. Our application collects all available coupons from each store so that people can easily access discounts and save money.
@@ -52,4 +52,20 @@ Users can sign up or log in using their email or Google account through Firebase
 - `postcss`
 - `tailwindcss`
 - `vite`
+
+  ## Installation
+1. Clone the repo:
+   ```
+   git clone https://github.com/AnsarulIslam10/Discount-Pro.git
+   ```
+2. Install dependencies:
+   ```
+   npm install
+   ```
+3. Set up Firebase and add config in `.env`
+   
+4. Run locally:
+   ```
+   npm run dev
+   ```
 
